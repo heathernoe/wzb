@@ -1,0 +1,602 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#363231;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #1C7FA6;
+}
+
+a.strong {
+  color: #1C7FA6;
+  border-bottom: dotted thin #1C7FA6;
+}
+
+a:hover {
+  color: #363231;
+}
+
+.text-primary {
+  color: #1C7FA6 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 45px;
+  text-transform: none;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+}
+
+.btn {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.btn-primary {
+  background-color: #1C7FA6;
+  border-color: #1C7FA6;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #186e90 !important;
+  border-color: #186e90 !important;
+  color: white;
+}
+
+.btn-primary:active, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(91, 92, 105, 0.5) !important;
+}
+
+.btn-secondary {
+  background-color: #617920;
+  border-color: #617920;
+	color:#fff;
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+  border-color: #c2b6a8 !important;
+  color: 827a77;
+}
+
+.btn-secondary:active, .btn-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130,122,119, 0.5) !important;
+}
+
+::-moz-selection {
+  background: #1C7FA6;
+  text-shadow: none;
+}
+
+::selection {
+  background: #1C7FA6;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+/* font awesome */
+.fa-stack-2x {
+	font-size: 1em;
+}	
+
+.navbar-brand > img {
+	display:inline-block;
+	margin-top:-12px;
+}
+
+#mainNav {
+  background-color: #transparent;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  background-color: #transparent;
+  font-weight: 300;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand {
+  color: #1C7FA6;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #5b5c69;
+}
+
+#mainNav ul {
+	list-style-type: none;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 160%;
+  line-height: 60px;
+  font-weight: 300;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  color: #1C7FA6;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-default {
+	background-color: rgba(255,255,255,0.85);
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #363231;
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: #transparent;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.75em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #transparent;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.75em;
+    padding: 17px 0;
+  }
+}
+
+header.masthead {
+  text-align: center;
+  color: #1C7FA6;
+  background-image: url("stump-leaf.png");
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+header.masthead .intro-text .intro-lead-in {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+  margin-bottom: 25px;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header.masthead .intro-text .intro-heading {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header.header-bar {
+	background-color:#edebec;
+	height:110px;
+}
+
+@media (min-width: 768px) {
+  header.masthead .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 25px;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+    font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}
+/* form styling */
+
+
+.ml-auto-downgrade {
+	margin-left: auto!important;
+}
+
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+#portfolio .portfolio-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(106, 109, 130, 0.9);
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+  margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#portfolio * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+
+/* The Modals */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1100; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content-x {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.close {
+    color: #1C7FA6;
+	opacity: 0.5;
+	text-shadow: 0px 0px #fff;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+#photoModal-title {
+	text-align:center;
+}
+
+
+#services a {
+	font-weight:700;
+	text-decoration:underline;
+}
+
+.email-row {
+	background: #edebec;
+	margin-top:40px;
+}
+
+.email {
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+.email-list {
+	margin: auto;
+}
+
+#services .form-inline .form-control {
+	width: 100%;
+}
+
+section#services ::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #b5aaa6;
+}
+
+section#services :-moz-placeholder {
+  font-weight: 400;
+  color: #b5aaa6;
+  /* Firefox 18- */
+}
+
+section#services ::-moz-placeholder {
+  font-weight: 400;
+  color: #b5aaa6;
+  /* Firefox 19+ */
+}
+
+section#portfolio .section-heading {
+  color: #1C7FA6;
+}
+
+section#about {
+  background-color: #1C7FA6;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+section#contact .section-heading {
+  color: #1C7FA6;
+}
+
+section#contact .form-group {
+  margin-bottom: 25px;
+}
+
+section#contact label {
+	color: #1C7FA6;
+	font-weight: 400;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+  padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+  height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+  height: 288px;
+}
+
+section#contact .form-control:focus {
+  border-color: #1C7FA6;
+  box-shadow: none;
+}
+
+section#contact ::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #1C7FA6;
+}
+
+section#contact :-moz-placeholder {
+  font-weight: 400;
+  color: #1C7FA6;
+  /* Firefox 18- */
+}
+
+section#contact ::-moz-placeholder {
+  font-weight: 400;
+  color: #b5aaa6;
+  /* Firefox 19+ */
+}
+
+section#contact :-ms-input-placeholder {
+  font-weight: 400;
+  color: #b5aaa6;
+}
+
+section#contact .text-muted {
+	color: #edebec;
+}
+
+.alert-success {
+	font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-size: 1.8em;
+	text-align: center;
+}
+
+.animated {
+	position: relative;
+	top: -600px;
+	z-index: 2000;
+    -webkit-animation-duration: 5s;
+	animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+         
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+         
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+         
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background-color:#114d65;
+	color:#fff;
+}
+
+footer span {
+  font-size: 90%;
+  line-height: 40px;
+  text-transform: none;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+footer ul.quicklinks {
+  font-size: 90%;
+  color:#fff;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: 'Homenaje', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 100%;
+  outline: none;
+  background-color: #1C7FA6;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+  background-color: #1C7FA6;
+}

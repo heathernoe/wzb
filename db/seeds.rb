@@ -1,7 +1,22 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+p1 = Project.create(name: "", image: "img-1.png", column: 1)
+p2 = Project.create(name: "", image: "img-2.png", column: 2)
+p3 = Project.create(name: "", image: "img-3.png", column: 3)
+p4 = Project.create(name: "", image: "img-4.png", column: 1)
+p5 = Project.create(name: "", image: "img-5.png", column: 2)
+p6 = Project.create(name: "", image: "img-6.png", column: 3)
+p7 = Project.create(name: "", image: "img-7.png", column: 1)
+p8 = Project.create(name: "", image: "img-8.png", column: 2)
+p9 = Project.create(name: "", image: "img-9.png", column: 3)
+p10 = Project.create(name: "", image: "img-10.png", column: 1)
+p11 = Project.create(name: "", image: "img-11.png", column: 2)
+p12 = Project.create(name: "", image: "img-12.png", column: 3)
+p13 = Project.create(name: "", image: "img-13.png", column: 1)
+p14 = Project.create(name: "", image: "img-14.png", column: 2)
+p15 = Project.create(name: "", image: "img-15.png", column: 3)
+p16 = Project.create(name: "", image: "img-16.png", column: 1)
+p17 = Project.create(name: "", image: "img-17.png", column: 2)
+p18 = Project.create(name: "", image: "img-18.png", column: 3)
+p19 = Project.create(name: "", image: "img-19.png", column: 1)

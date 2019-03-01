@@ -1,0 +1,123 @@
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Explore Our Craftsmanship</a>
+        </div>
+      </div>
+    </header>
+
+	<% if flash[:notice] -%>
+		<div class = "alert alert-success animated fadeOut"><%= flash[:notice] %></div>
+	<% end %>
+	
+	<!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Work</h2>
+            <h3 class="section-subheading text-muted">Specializing in exclusive exotic wood for decks, roof decks, pergola, siding, framing & more.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+			<% @projects.each do |p| %>
+				<% if p.column == 1 %>
+					  <%= image_tag p.image, :class => "img-responsive project-img" %>
+					<div class="portfolio-caption">
+					  <h4><%= p.name %></h4>
+					</div>
+				<% end %>
+			<% end %>
+          </div>
+		  <div class="col-md-4 col-sm-6 portfolio-item">
+			<% @projects.each do |p| %>
+				<% if p.column == 2 %>
+					  <%= image_tag p.image, :class => "img-responsive project-img"  %>
+					<div class="portfolio-caption">
+					  <h4><%= p.name %></h4>
+					</div>
+				<% end %>
+			<% end %>
+          </div>
+		  <div class="col-md-4 col-sm-6 portfolio-item">
+			<% @projects.each do |p| %>
+				<% if p.column == 3 %>
+					  <%= image_tag p.image, :class => "img-responsive project-img"  %>
+					<div class="portfolio-caption">
+					  <h4><%= p.name %></h4>
+					</div>
+				<% end %>
+			<% end %>
+          </div>
+			
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+          </div>
+        </div>
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<p>Lorem ipsum dolor amet tilde hoodie quinoa VHS, enamel pin roof party sriracha vexillologist bespoke. Freegan mixtape man bun live-edge, deep v before they sold out iPhone fashion axe four dollar toast XOXO chillwave. Godard deep v echo park shabby chic cliche, palo santo +1 distillery vaporware bushwick kickstarter succulents green juice kogi disrupt. Iceland edison bulb single-origin coffee man braid. Pinterest kickstarter tousled gastropub meh semiotics yuccie pok pok squid franzen dreamcatcher.</p>
+			</div>
+		</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Contact Me</h2>
+            <h3 class="section-subheading">Polish or English</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+			<%= form_tag("/contact", method: "post") do %>
+			  
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+				    <label for="name">Name</label>
+                    <input class="form-control" id="name" name="sender" type="text" required oninput="setCustomValidity('')"  oninvalid="this.setCustomValidity('Kindly tell me your name')">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+				    <label for="email">Email</label>
+                    <input class="form-control" id="email" name="email" type="email" required oninput="setCustomValidity('')"  oninvalid="this.setCustomValidity('Please tell me where I can reply back')">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+					<label for="phone">Phone (optional)</label>
+                    <input class="form-control" id="phone" name="phone" type="tel">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+					<label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('What can I help you with?')"></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button class="btn btn-secondary btn-xl text-uppercase" type="submit">Send Message</button>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>
