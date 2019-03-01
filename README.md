@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# wzb
+Portfolio site for a carpenter
+>>>>>>> d2ccb64f94f42695255530a3709bfb2eeef752e8
